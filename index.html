@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> 먹방</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Sunflower:300&display=swap" rel="stylesheet">
+	<style type="text/css">
+		body{margin:0;}
+		h1{font-family: 'Sunflower', sans-serif; text-align: center;}
+		.thum{height: 300px; opacity: 1; display: inline-block; align-content: center; margin:20;}
+		.thum:hover {opacity: 0.3;}
+	</style>
+</head>
+<body>
+	<h1>올바른 먹방 소리를 찾아보세요</h1>
+	<img src="apple.jpg" class="thum" id="a">
+	<audio src="chipeat.wav" loop id="aa"></audio>
+
+
+	<img src="chocolate.jpg" class="thum" id="b">
+	<audio src="appleeat.wav" loop id="bb"></audio>
+
+	<img src="ramyeon.jpg" class="thum" id="c">
+	<audio src="noodleeat.mp3" loop id="cc"></audio>
+
+	<img src="chip.jpg" class="thum" id="d">
+	<audio src="chocolateeat.wav" loop id="dd"></audio>
+
+	<script type="text/javascript">
+		
+		var astate = "off";
+		a.onclick = function(){
+			a.src = "bad.gif";
+			if (astate == "off") {
+			a.style.opacity = "1";
+			aa.play();
+			astate = "on";
+		}else{
+			a.src = "apple.jpg";
+			a.style.opacity = "0.3";
+			aa.pause();
+			astate = "off";
+		}
+		}
+
+			var bstate = "off";
+		b.onclick = function(){
+			b.src = "bad2.gif";
+			if (bstate == "off") {
+			b.style.opacity = "1";
+			bb.play();
+			bstate = "on";
+		}else{
+			b.src = "chocolate.jpg";
+			b.style.opacity = "0.3";
+			bb.volume = 0.5;
+			bb.pause();
+			bstate = "off";
+		}
+		}
+		var cstate = "off";
+		c.onclick = function(){
+			c.src = "good.gif";
+			if (cstate == "off") {
+			c.style.opacity = "1";
+			cc.play();
+			cstate = "on";
+		}else{
+			c.src = "ramyeon.jpg";
+			c.style.opacity = "1";
+			cc.pause();
+			cstate = "off";
+		}
+		}
+			var dstate = "off";
+		d.onclick = function(){
+			d.src = "bad3.gif";
+		if (dstate == "off") {
+			d.style.opacity = "1";
+			dd.play();
+			dstate = "on";
+		}else{
+			d.src = "chip.jpg";
+			d.style.opacity = "0.3";
+			dd.pause();
+			dstate = "off";
+			bb.volume = 1;
+		}
+		}
+	</script>
+
+</body>
+</html>
+
